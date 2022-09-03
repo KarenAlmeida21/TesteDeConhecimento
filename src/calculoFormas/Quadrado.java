@@ -4,7 +4,7 @@ public class Quadrado extends FiguraGeometrica {
 
     @Override
     public double calcularArea(double comprimento, double largura) {
-        setArea(comprimento * largura);
+        setArea(multiplicar(comprimento,largura));
         return getArea();
     }
 

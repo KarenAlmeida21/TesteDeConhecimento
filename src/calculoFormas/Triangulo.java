@@ -4,7 +4,7 @@ public class Triangulo extends FiguraGeometrica {
 
     @Override
     public double calcularArea(double base, double altura) {
-        setArea(base * altura/2);
+        setArea(multiplicar(base,altura)/2);
         return getArea();
     }
 

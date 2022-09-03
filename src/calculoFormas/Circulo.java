@@ -1,10 +1,11 @@
 package calculoFormas;
 
-public class Retangulo extends FiguraGeometrica{
+public class Circulo extends FiguraGeometrica {
+    double PI = Math.PI;
 
     @Override
-    public double calcularArea(double comprimento, double largura) {
-        setArea(multiplicar(comprimento,largura));
+    public double calcularArea(double raio, double PI) {
+        setArea(multiplicar(raio,raio) * PI);
         return getArea();
     }
 
@@ -13,9 +14,4 @@ public class Retangulo extends FiguraGeometrica{
         return "A área do " + getTipoDeFigura()+
                 " é " + getArea();
     }
-
-
-
-
-
 }

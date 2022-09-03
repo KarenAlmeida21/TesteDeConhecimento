@@ -20,6 +20,10 @@ public abstract class FiguraGeometrica {
     public void setTipoDeFigura(TipoDeFigura tipoDeFigura) {
         this.tipoDeFigura = tipoDeFigura;
     }
+    public double multiplicar(double n1, double n2){
+        Double resultado = n1 * n2;
+        return resultado;
+    }
 
     public  double calcularArea(double comprimento, double largura){
         setArea(comprimento * largura);
