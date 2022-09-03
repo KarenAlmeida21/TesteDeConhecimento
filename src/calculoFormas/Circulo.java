@@ -5,13 +5,14 @@ public class Circulo extends FiguraGeometrica {
 
     @Override
     public double calcularArea(double raio, double PI) {
-        setArea(multiplicar(raio,raio) * PI);
+        double raioDuplo = multiplicar(raio, raio);
+        setArea(raioDuplo * PI);
         return getArea();
     }
 
     @Override
     public String toString() {
-        return "A área do " + getTipoDeFigura()+
+        return "A área do " + getTipoDeFigura() +
                 " é " + getArea();
     }
 }

@@ -26,7 +26,7 @@ public abstract class FiguraGeometrica {
     }
 
     public  double calcularArea(double comprimento, double largura){
-        setArea(comprimento * largura);
+        setArea(multiplicar(comprimento,largura));
         return getArea();
     }
 

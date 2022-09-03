@@ -4,8 +4,7 @@ public class Retangulo extends FiguraGeometrica{
 
     @Override
     public double calcularArea(double comprimento, double largura) {
-        setArea(multiplicar(comprimento,largura));
-        return getArea();
+        return super.calcularArea(comprimento, largura);
     }
 
     @Override
