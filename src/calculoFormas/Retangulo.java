@@ -1,10 +1,10 @@
 package calculoFormas;
 
-public class Quadrado extends FiguraGeometrica {
+public class Retangulo extends FiguraGeometrica{
+    private double base;
+    private  double altura;
 
-
-    public Quadrado() {
-        super();
+    public Retangulo() {
     }
 
     @Override
@@ -12,10 +12,14 @@ public class Quadrado extends FiguraGeometrica {
         setArea(comprimento * largura);
         return getArea();
     }
-
     @Override
     public String toString() {
         return "A área do " + getTipoDeFigura()+
                 " é " + getArea();
     }
+
+
+
+
+
 }

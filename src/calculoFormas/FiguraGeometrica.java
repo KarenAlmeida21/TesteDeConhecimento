@@ -5,11 +5,6 @@ public abstract class FiguraGeometrica {
     public TipoDeFigura tipoDeFigura;
 
 
-
-    public FiguraGeometrica() {
-
-    }
-
     public double getArea() {
         return area;
     }
@@ -26,8 +21,11 @@ public abstract class FiguraGeometrica {
         this.tipoDeFigura = tipoDeFigura;
     }
 
+    public  double calcularArea(double comprimento, double largura){
+        setArea(comprimento * largura);
+        return getArea();
+    }
 
-    public abstract double calcularArea(double medida);
 
     public void alterarFigura(TipoDeFigura tipoDeFigura) {
 
