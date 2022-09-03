@@ -1,10 +1,10 @@
 package calculoFormas;
 
-public class Quadrado extends FiguraGeometrica {
+public class Triangulo extends FiguraGeometrica {
 
     @Override
-    public double calcularArea(double comprimento, double largura) {
-        setArea(comprimento * largura);
+    public double calcularArea(double base, double altura) {
+        setArea(base * altura/2);
         return getArea();
     }
 

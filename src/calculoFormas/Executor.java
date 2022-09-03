@@ -14,5 +14,10 @@ public class Executor {
         retangulo1.alterarFigura(TipoDeFigura.RETANGULO);
         retangulo1.calcularArea(12,9);
         System.out.println(retangulo1);
+
+        Triangulo o = new Triangulo();
+        o.alterarFigura(TipoDeFigura.TRIANGULO);
+        o.calcularArea(5,4);
+        System.out.println(o);
     }
 }
