@@ -20,5 +20,16 @@ public abstract class FiguraGeometrica {
     public TipoDeFigura getTipoDeFigura() {
         return tipoDeFigura;
     }
+
+    public void setTipoDeFigura(TipoDeFigura tipoDeFigura) {
+        this.tipoDeFigura = tipoDeFigura;
+    }
+
+
     public abstract double calcularArea(double medida);
+
+    public void alterarFigura(TipoDeFigura tipoDeFigura) {
+
+        setTipoDeFigura(tipoDeFigura);
+    }
 }
