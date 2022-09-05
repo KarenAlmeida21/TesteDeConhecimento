@@ -32,12 +32,40 @@ public class Sistema {
 
     }
 
+
+
     public static void menuInicial(){
         System.out.println("ESTOQUE");
-        System.out.println("CadastrarProduto");
-        System.out.println("DeletarProduto");
-        System.out.println("ExibirProduto");
-        System.out.println("Sair");
+        System.out.println("Digite 1 para cadastrar produto");
+        System.out.println("Digite 2 para deletar produto");
+        System.out.println("Digite 3 para exibir produto");
+        System.out.println("Digite 4 para sair do sistema de estoque");
     }
 
-}
+    public static void operacaoUsuario() throws Exception {
+        boolean menu= true;
+
+        menuInicial();
+        int opcaoUsuario = obterDados("Digite a opção desejada:").nextInt();
+        while (menu){
+            if(opcaoUsuario == 1){
+                cadastrarProduto();
+                break;
+            }
+            if(opcaoUsuario==2 ){
+                deletarProduto();
+            }
+            if(opcaoUsuario == 3){
+                exibirProduto();
+            }
+            if(opcaoUsuario == 4){
+                menu = false;
+
+
+            }
+
+            }
+        }
+    }
+
+
