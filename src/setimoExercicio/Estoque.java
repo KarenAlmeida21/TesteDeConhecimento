@@ -26,6 +26,15 @@ public class Estoque {
         for(Produto produtoReferencia: produtosList){
             System.out.println(produtoReferencia;
         }
+
+    }
+    public static void deletarProduto(String nome){
+        for(Produto produtoReferencia: produtosList){
+            produtoReferencia.getNome().equals(nome){
+                produtosList.remove(produtoReferencia);
+            }
+        }
+
     }
 
 }
