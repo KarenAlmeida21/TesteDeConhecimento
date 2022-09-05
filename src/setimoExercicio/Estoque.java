@@ -17,24 +17,33 @@ public class Estoque {
         this.produtosList = produtosList;
     }
 
-    public static Produto cadastrarProduto(String nome, double valor){
-        Produto produto = new Produto(nome,valor);
+    public static Produto cadastrarProduto(String nome, double valor) throws Exception {
+        verificarCadastroProdutoPositivo(nome);
+        Produto produto = new Produto(nome, valor);
         produtosList.add(produto);
         return produto;
     }
-    public static void exibir(){
-        for(Produto produtoReferencia: produtosList){
-            System.out.println(produtoReferencia;
+
+    public static void exibir() {
+        for (Produto produtoReferencia : produtosList) {
+            System.out.println(produtoReferencia);
         }
 
     }
-    public static void deletarProduto(String nome){
-        for(Produto produtoReferencia: produtosList){
-            produtoReferencia.getNome().equals(nome){
+
+    public static void deletarProduto(String nome) {
+        for (Produto produtoReferencia : produtosList) {
+            if (produtoReferencia.getNome().equals(nome)) {
                 produtosList.remove(produtoReferencia);
             }
         }
 
     }
-
+    public static void verificarCadastroProdutoPositivo(String nome) throws Exception {
+        for(Produto produto: produtosList){
+            if(produto.getNome().equals(nome)){
+                throw new Exception("Produto já cadastrado. Verifique!");
+            }
+        }
+    }
 }
