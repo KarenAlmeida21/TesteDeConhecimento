@@ -8,10 +8,6 @@ public class Sistema {
         return new Scanner(System.in);
     }
 
-    public static void encerrarMenus() {
-        System.out.println("Você será rediciobado ao menu anterior\n");
-    }
-
     public static void opcaoInvalida() {
         System.out.println("Digite uma opção existente no menu\n");
     }
@@ -22,12 +18,12 @@ public class Sistema {
         return Estoque.cadastrarProduto(nomeProduto, valorProduto);
     }
 
-    public static Produto deletarProduto() throws Exception {
+    public static void deletarProduto() throws Exception {
         String nomeProduto = obterDados("Digite o nome do produto que será deletado").nextLine();
-        return Estoque.deletarProduto(nomeProduto);
+         Estoque.deletarProduto(nomeProduto);
     }
 
-    public static void exibirProduto() {
+    public static void exibirProdutos() {
         Estoque.exibir();
 
     }
@@ -61,7 +57,8 @@ public class Sistema {
                 break;
             }
             if(opcaoUsuario == 3){
-                exibirProduto();
+                Estoque.verificacaoListaVazia();
+                exibirProdutos();
                 break;
             }
             if(opcaoUsuario == 4){

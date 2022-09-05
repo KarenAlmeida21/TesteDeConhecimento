@@ -1,5 +1,7 @@
 package setimoExercicio;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,23 +29,31 @@ public class Estoque {
     public static void exibir() {
         for (Produto produtoReferencia : produtosList) {
             System.out.println(produtoReferencia.getNome());
+
         }
 
     }
 
-    public static Produto deletarProduto(String nome) throws Exception {
-        for(Produto produto: produtosList){
-            if(produtosList.contains(produto.getNome())){
+
+
+   public  static void deletarProduto(String nome) throws Exception {
+        for (Produto produto : produtosList) {
+            if (produto.getNome().equalsIgnoreCase(nome)) {
                 produtosList.remove(produto);
+                System.out.println("Produto deletado");
             }
         }
-        return (Produto) produtosList;
 
+    }
+    public static  void verificacaoListaVazia(){
+        if(Estoque.produtosList.size()==0){
+            System.out.println("Não há produtos cadastrados");
+        }
     }
 
     public static void verificarCadastroProdutoPositivo(String nome) throws Exception {
-        for(Produto produto: produtosList){
-            if(produto.getNome().equalsIgnoreCase(nome)){
+        for (Produto produto : produtosList) {
+            if (produto.getNome().equalsIgnoreCase(nome)) {
                 throw new Exception("Produto já cadastrado. Verifique!");
             }
         }
