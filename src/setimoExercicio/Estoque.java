@@ -32,13 +32,8 @@ public class Estoque {
     }
 
     public static void deletarProduto(String nome) throws Exception {
-        for (Produto produtoReferencia : produtosList) {
-            if (produtoReferencia.getNome().equals(nome)) {
-                produtosList.remove(produtoReferencia);
-            }else {
-                verificarCadastroProdutoNegativo(nome);
-            }
-        }
+        verificarCadastroProdutoNegativo(nome);
+        produtosList.remove(nome);
 
     }
     public static void verificarCadastroProdutoPositivo(String nome) throws Exception {
