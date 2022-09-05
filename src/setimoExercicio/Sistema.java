@@ -32,6 +32,10 @@ public class Sistema {
 
     }
 
+    public static void mensagemEncerramento(){
+        System.out.println("Sistema encerrado\n");
+    }
+
 
 
     public static void menuInicial(){
@@ -54,14 +58,19 @@ public class Sistema {
             }
             if(opcaoUsuario==2 ){
                 deletarProduto();
+                break;
             }
             if(opcaoUsuario == 3){
                 exibirProduto();
+                break;
             }
             if(opcaoUsuario == 4){
-                menu = false;
-
-
+                mensagemEncerramento();
+                menu=false;
+                break;
+            }else {
+                opcaoInvalida();
+                break;
             }
 
             }
