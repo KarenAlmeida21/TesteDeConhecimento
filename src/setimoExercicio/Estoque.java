@@ -26,7 +26,7 @@ public class Estoque {
 
     public static void exibir() {
         for (Produto produtoReferencia : produtosList) {
-            System.out.println(produtoReferencia);
+            System.out.println(produtoReferencia.getNome());
         }
 
     }

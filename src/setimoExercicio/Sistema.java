@@ -46,7 +46,7 @@ public class Sistema {
         System.out.println("Digite 4 para sair do sistema de estoque");
     }
 
-    public static void operacaoUsuario() throws Exception {
+    public static boolean operacaoUsuario() throws Exception {
         boolean menu= true;
 
         menuInicial();
@@ -74,7 +74,8 @@ public class Sistema {
             }
 
             }
-        }
+        return menu;
+    }
     }
 
 
