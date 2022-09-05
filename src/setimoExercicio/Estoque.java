@@ -31,11 +31,16 @@ public class Estoque {
 
     }
 
-    public static void deletarProduto(String nome) throws Exception {
-        verificarCadastroProdutoNegativo(nome);
-        produtosList.remove(nome);
+    public static Produto deletarProduto(String nome) throws Exception {
+        for(Produto produto: produtosList){
+            if(produtosList.contains(produto.getNome())){
+                produtosList.remove(produto);
+            }
+        }
+        return (Produto) produtosList;
 
     }
+
     public static void verificarCadastroProdutoPositivo(String nome) throws Exception {
         for(Produto produto: produtosList){
             if(produto.getNome().equalsIgnoreCase(nome)){
@@ -43,12 +48,5 @@ public class Estoque {
             }
         }
     }
-    public static void verificarCadastroProdutoNegativo(String nome)throws Exception{
-        for( Produto produto: produtosList){
-            if(!produto.getNome().equalsIgnoreCase(nome)){
-                throw new Exception("Produto não encontrado");
-            }
-        }
 
-    }
 }
