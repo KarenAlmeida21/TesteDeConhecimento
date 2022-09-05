@@ -22,5 +22,10 @@ public class Estoque {
         produtosList.add(produto);
         return produto;
     }
+    public static void exibir(){
+        for(Produto produtoReferencia: produtosList){
+            System.out.println(produtoReferencia;
+        }
+    }
 
 }
